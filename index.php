@@ -32,6 +32,7 @@
 	        <li class="navbar-item"><a href="#">Administración</a></li>
 	        <li class="navbar-item"><a href="#">Retención</a></li>
 	      </ul>
+	      
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
