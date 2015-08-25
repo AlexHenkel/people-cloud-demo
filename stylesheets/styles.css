@@ -1,38 +1,103 @@
-/* line 5, ../sass/styles.scss */
-.navbar-container {
-  padding-left: 0;
+/* line 7, ../sass/styles.scss */
+.serif, .profile-position {
+  font-family: 'PT Serif', serif;
 }
 
-/* line 8, ../sass/styles.scss */
+/* line 11, ../sass/styles.scss */
+.open-sans, body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* line 15, ../sass/styles.scss */
+body {
+  font-size: 14px;
+}
+
+/* line 23, ../sass/styles.scss */
+.navbar {
+  margin-bottom: 0;
+}
+
+/* line 27, ../sass/styles.scss */
+.navbar-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 31, ../sass/styles.scss */
 .navbar-header {
   background-color: #2D2D2D;
 }
 
-/* line 12, ../sass/styles.scss */
+/* line 35, ../sass/styles.scss */
+.navbar-collapse {
+  background-color: white;
+}
+
+/* line 39, ../sass/styles.scss */
 .navbar-brand {
   padding-left: 30px;
 }
-/* line 14, ../sass/styles.scss */
+/* line 41, ../sass/styles.scss */
 .navbar-brand .glyphicon-cloud {
   font-size: 24px;
 }
 
-/* line 21, ../sass/styles.scss */
+/* line 48, ../sass/styles.scss */
 .navbar-nav .navbar-item a {
   background-color: white;
   color: gray;
 }
-/* line 24, ../sass/styles.scss */
+/* line 51, ../sass/styles.scss */
 .navbar-nav .navbar-item a:hover {
   color: blue !important;
 }
-/* line 29, ../sass/styles.scss */
+/* line 56, ../sass/styles.scss */
 .navbar-nav .navbar-item.active a {
   background-color: blue;
   color: white;
 }
-/* line 32, ../sass/styles.scss */
+/* line 59, ../sass/styles.scss */
 .navbar-nav .navbar-item.active a:hover {
   color: blue;
   background-color: white;
+}
+
+/* line 69, ../sass/styles.scss */
+.navbar-right .nav-search {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+/* line 72, ../sass/styles.scss */
+.navbar-right .nav-search .glyphicon-search {
+  border: 1px solid;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+/* line 84, ../sass/styles.scss */
+.profile {
+  background-color: #2D2D2D;
+  padding-left: 0;
+  height: 250px;
+}
+
+/* line 91, ../sass/styles.scss */
+.profile-pic img {
+  height: 250px;
+}
+
+/* line 96, ../sass/styles.scss */
+.profile-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+/* line 102, ../sass/styles.scss */
+.profile-position {
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  color: orange;
 }

@@ -1,12 +1,39 @@
 $dark-gray: #2D2D2D;
 
+// Base
+
+$font-size: 14px;
+
+.serif {
+	font-family: 'PT Serif', serif;
+}
+
+.open-sans {
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	font-size: $font-size;
+	@extend .open-sans;
+}
+
+
 
 // Navbar
+.navbar {
+	margin-bottom: 0;
+}
+
 .navbar-container {
 	padding-left: 0;
+	padding-right: 0;
 }
 .navbar-header {
 	background-color: $dark-gray;
+}
+
+.navbar-collapse {
+	background-color: white;
 }
 
 .navbar-brand {
@@ -37,4 +64,47 @@ $dark-gray: #2D2D2D;
 		}
 	}
 }
+
+.navbar-right {
+	.nav-search {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		.glyphicon-search {
+			border: 1px solid;
+		    padding: 8px;
+		    border-radius: 50%;
+		}
+	}
+}
+//////////
+
+
+// Profile
+
+.profile {
+	background-color: $dark-gray;
+	padding-left: 0;
+	height: 250px;
+}
+
+.profile-pic {
+	img {
+		height: 250px;
+	}
+}
+
+.profile-name {
+	font-size: $font-size + 6;
+	font-weight: 700;
+	color: white;
+}
+
+.profile-position {
+	font-size: $font-size + 4;
+	@extend .serif;
+	font-weight: 400;
+	font-style: italic;
+	color: orange;
+}
+
 //////////

@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>People Cloud</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="stylesheets/styles.css">
 	
@@ -26,15 +28,22 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	        <li class="navbar-item active"><a href="#">Datos del recurso<span class="sr-only">(current)</span></a></li>
+	        <li class="active navbar-item"><a href="#">Datos del Recurso</a></li>
 	        <li class="navbar-item"><a href="#">Planeación y Organización</a></li>
 	        <li class="navbar-item"><a href="#">Atracción</a></li>
 	        <li class="navbar-item"><a href="#">Administración</a></li>
 	        <li class="navbar-item"><a href="#">Retención</a></li>
 	      </ul>
-	      
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a class="nav-search" href="#"><i class="glyphicon glyphicon-search"></i></a></li>
+	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
+
+
+	
+
+
 </body>
 </html>
