@@ -1,0 +1,40 @@
+$dark-gray: #2D2D2D;
+
+
+// Navbar
+.navbar-container {
+	padding-left: 0;
+}
+.navbar-header {
+	background-color: $dark-gray;
+}
+
+.navbar-brand {
+	padding-left: 30px;
+	.glyphicon-cloud {
+		font-size: 24px;
+	}
+}
+
+.navbar-nav {
+	.navbar-item {
+		a {
+			background-color: white;
+			color: gray;
+			&:hover {
+				color: blue !important;
+			}
+		}
+		&.active {
+			a {
+				background-color: blue;
+				color: white;
+				&:hover {
+					color: blue;
+					background-color: white;
+				}
+			}
+		}
+	}
+}
+//////////

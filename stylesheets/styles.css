@@ -1,0 +1,38 @@
+/* line 5, ../sass/styles.scss */
+.navbar-container {
+  padding-left: 0;
+}
+
+/* line 8, ../sass/styles.scss */
+.navbar-header {
+  background-color: #2D2D2D;
+}
+
+/* line 12, ../sass/styles.scss */
+.navbar-brand {
+  padding-left: 30px;
+}
+/* line 14, ../sass/styles.scss */
+.navbar-brand .glyphicon-cloud {
+  font-size: 24px;
+}
+
+/* line 21, ../sass/styles.scss */
+.navbar-nav .navbar-item a {
+  background-color: white;
+  color: gray;
+}
+/* line 24, ../sass/styles.scss */
+.navbar-nav .navbar-item a:hover {
+  color: blue !important;
+}
+/* line 29, ../sass/styles.scss */
+.navbar-nav .navbar-item.active a {
+  background-color: blue;
+  color: white;
+}
+/* line 32, ../sass/styles.scss */
+.navbar-nav .navbar-item.active a:hover {
+  color: blue;
+  background-color: white;
+}
