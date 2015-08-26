@@ -1,23 +1,26 @@
 $dark-gray: #2D2D2D;
+$light-gray: #EDEDED;
+$gray: #959595;
+$blue: #00418E;
+$orange: #FFB33C;
 
 // Base
 
-$font-size: 14px;
+$font-size: 12px;
 
 .serif {
 	font-family: 'PT Serif', serif;
 }
 
-.open-sans {
-	font-family: 'Open Sans', sans-serif;
+.roboto {
+	font-family: 'Roboto', sans-serif;
 }
 
 body {
 	font-size: $font-size;
-	@extend .open-sans;
+	@extend .roboto;
+	background-color: $light-gray;
 }
-
-
 
 // Navbar
 .navbar {
@@ -30,6 +33,11 @@ body {
 }
 .navbar-header {
 	background-color: $dark-gray;
+}
+
+.navbar-nav{
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .navbar-collapse {
@@ -49,21 +57,19 @@ body {
 			background-color: white;
 			color: gray;
 			&:hover {
-				color: blue !important;
+				color: $blue !important;
 			}
 		}
 		&.active {
-			a {
-				background-color: blue;
-				color: white;
-				&:hover {
-					color: blue;
-					background-color: white;
-				}
+			a, a:hover, a:focus{
+				background-color: $blue;
+				color: white !important;
 			}
 		}
 	}
 }
+
+
 
 .navbar-right {
 	.nav-search {
@@ -76,35 +82,268 @@ body {
 		}
 	}
 }
-//////////
 
+.navbar-default .navbar-toggle:hover {
+    background-color: white;
+}
+//////////
 
 // Profile
 
 .profile {
 	background-color: $dark-gray;
 	padding-left: 0;
-	height: 250px;
+	// height: 200px;
 }
 
-.profile-pic {
+.profile-pic.large {
+	background-image: url("../assets/John_Doe.jpg");
+	background-size: cover;
+}
+
+.profile-pic.small {
+	padding-top: 25px;
 	img {
-		height: 250px;
+		height: 150px;
+		border-radius: 50%;
 	}
 }
 
+.profile-info  {
+	padding: 25px 15px;
+}
+
 .profile-name {
-	font-size: $font-size + 6;
+	font-size: $font-size + 4;
 	font-weight: 700;
 	color: white;
+	margin-top: 0;
 }
 
 .profile-position {
-	font-size: $font-size + 4;
+	font-size: $font-size;
 	@extend .serif;
 	font-weight: 400;
 	font-style: italic;
-	color: orange;
+	color: $orange;
+}
+
+.profile-enviar {
+	border-radius: 0px;
+	border: 2px solid $gray;
+	color: $gray;
+	padding: 0 0 0 12px;
+	text-transform: uppercase;
+	font-size: 11px;
+	letter-spacing: 2px;
+	&:hover {
+		color: white;
+		border-color: white;
+	}
+	.glyphicon-envelope {
+		border-left: 2px solid;
+		padding: 7px;
+		margin-top: -1px;
+	}
+}
+
+.profile-main {
+	color: white;
+	ul {
+		padding-left: 0;
+		list-style: none;
+		@extend .serif;
+		font-size: $font-size;
+		i {
+			color: $orange;
+		}
+	}
+	&.large {
+		padding: 25px 15px;
+	}
+
+	&.small{
+
+	}
+}
+
+.profile-col-1 {
+	padding-right: 0;
+}
+
+.profile-col-2 {
+	padding-left: 3px;
 }
 
 //////////
+
+// Main
+.wrapper-main {
+	position: relative;
+}
+
+.main-overlay {
+	background-color: $blue;
+}
+
+.main {
+	position: absolute;
+	height: 40px;
+	z-index: 10;
+	top: 0px;
+	padding-left: 50px;
+	padding-right: 50px;
+	width: 100%;
+}
+
+.nav-tabs {
+	border-bottom: 0;
+}
+
+.main-tab {
+	a {
+		background-color: transparent !important;
+		border-top: none !important;
+		border-right: none !important;
+		border-left: none !important;
+		border-bottom: 5px solid transparent !important;
+		color: white !important;
+		text-transform: uppercase;
+		padding-bottom: 15px !important;
+		padding-top: 15px !important;
+		font-weight: 300;
+		&:hover {
+			font-weight: 700;
+		}
+	}
+	&.active {
+		a {
+			font-weight: 700;
+			border-bottom-color: $orange !important;
+		}		
+	}
+	
+}
+
+.tab-title {
+	font-size: $font-size + 4;
+	font-weight: 700;
+	color: $dark-gray;
+}
+
+.general-card {
+	background-color: white;
+	color: $dark-gray;
+	text-align: center;
+	padding: 10px 0;
+	margin-bottom: 20px;
+	position: relative;
+	overflow: hidden;
+	h2 {
+		font-size: $font-size;
+		font-weight: 700;
+		text-transform: uppercase;
+		&:after {
+			content: ":"
+		}
+	}
+}
+
+.card-sticker {
+	background-color: $blue;
+	position: absolute;
+	top: 0;
+	left: 10px;
+	color: white;
+	font-size: $font-size;
+	padding: 5px;
+}
+
+@media (min-width: 768px) {
+	.general-card {
+		height: 250px;
+		h2:first-child {
+			margin-top: 0;
+		}
+	}
+
+	.card-wrapper {
+		line-height: 20px;
+	}
+
+	.card-wrapper.small{
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.general-card.large {
+		height: 300;
+		.card-wrapper {
+			padding: 20px 0;
+		}
+	}
+
+	#map {
+		position: absolute;
+		bottom: 0;
+	}
+
+	.speaker {
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.quote {
+		&:before {
+			content: '"'!important;
+		}
+	}
+}
+
+#map {
+	width: 100%;
+	height: 120px;
+}
+
+.comillas {
+	color: $blue;
+	// border-bottom: 3px solid $orange;
+	font-size: 90px;
+}
+
+.quote-wrapper {
+	.container-fluid {
+		padding: 15px 10px;
+	}
+}
+
+.quote {
+	&:before {
+		content: none;
+	}
+	&:after {
+		content: '"';
+	}
+	@extend .serif;
+	font-style: italic;
+	font-size: $font-size + 4; 
+}
+
+.speaker {
+	background-color: $blue;
+	color: white;
+	font-size: $font-size + 3;
+	font-weight: 700;
+	width: 100%;
+	text-align: center;
+	padding: 10px 0;
+	text-transform: uppercase;
+}
+
+
+
+
+// 
